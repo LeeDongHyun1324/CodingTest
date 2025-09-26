@@ -14,13 +14,12 @@ graph = {
 
 
 def dfs_stack(adjacent_graph, start_node):
-    # 구현해보세요!
     stack = [start_node]
     visited = []
     while stack: # 스택이 빌 때까지
         current_node = stack.pop()
         visited.append(current_node)
-        print("current_node ", current_node, "visited ", visited)
+        print("current_node ", current_node, "visited", visited)
         for adjacent_node in adjacent_graph[current_node]:
             if adjacent_node not in visited:
                 stack.append(adjacent_node)
