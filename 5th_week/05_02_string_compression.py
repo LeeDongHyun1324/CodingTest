@@ -23,10 +23,13 @@ def string_compression(string):
                 else:  # 문자가 반복되지 않아 한번만 나타난 경우 1은 생략함
                     compressed += cur
                 count = 1  # 초기화
+
+        # 마지막 배열 끝 확인
         if count > 1:
             compressed += (str(count) + splited[-1])
         else:  # 문자가 반복되지 않아 한번만 나타난 경우 1은 생략함
             compressed += splited[-1]
+
         compression_length_array.append(len(compressed))
 
     return min(compression_length_array)  # 최솟값 리턴
