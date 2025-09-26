@@ -15,8 +15,8 @@ class MaxHeap:
                 break
 
     def delete(self):
-        self.items[1], self.items[-1] = self.items[-1], self.items[1]
-        prev_max = self.items.pop()
+        self.items[1], self.items[-1] = self.items[-1], self.items[1]   # 루트 노드와 제일 오른쪽 끝 노드와 교환
+        prev_max = self.items.pop() # 루트였던 노드를 빼온다
 
         cur_index = 1
         while cur_index <= len(self.items) - 1:
