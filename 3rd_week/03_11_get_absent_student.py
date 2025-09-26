@@ -5,7 +5,7 @@ present_students = ["정연", "모모", "채영", "쯔위", "사나", "나연", 
 def get_absent_student(all_array, present_array):
     dict = {}
     for student in all_array:
-        dict[student] = True # True를 하는 이유는 딕셔너리에 student가 있는지 확인하기 위해서 
+        dict[student] = True # True를 하는 이유는 딕셔너리에 student가 있는지 확인하기 위해서, 초기화 느낌?
 
     for present_student in present_array:
         del dict[present_student]
